@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/studentDB?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
+
+        <property name="connection.username">root</property>
+        <property name="connection.password">InnovayB4941</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">3</property>
+        <!--<property name="default-time-zone='+08:00'"></property>-->
+        <!-- Echo all executed SQL to stdout -->
+        <!--<property name="show_sql">true</property>-->
+        <mapping class="entity.Student" />
+        <mapping class="entity.Address" />
+        <mapping class="entity.Department" />
+        <mapping class="entity.Subject" />
+
+    </session-factory>
+
+</hibernate-configuration>

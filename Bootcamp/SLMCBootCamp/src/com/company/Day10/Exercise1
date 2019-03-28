@@ -1,0 +1,3 @@
+The faster class which reads large files is the one that uses BufferedReader.
+The Scanner has a little buffer (1KB char buffer)
+as opposed to the BufferedReader (8KB byte buffer)

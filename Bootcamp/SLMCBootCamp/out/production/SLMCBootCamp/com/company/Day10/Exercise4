@@ -1,0 +1,6 @@
+    Be able to explain what accounts for the processing time difference between the bubble-sort
+    and the selection sort algorithms?
+
+    The factor to consider with the difference between the processing time of bubble-sort and selection-sort
+    is the method of both sorting algorithm. Bubble-sort exchanges elements while
+    selection sorts selects. In terms of speed selection-sort is faster than bubble-sort.

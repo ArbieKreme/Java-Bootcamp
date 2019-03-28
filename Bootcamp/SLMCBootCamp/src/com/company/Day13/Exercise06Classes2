@@ -1,0 +1,6 @@
+2.)
+-A static variable and a static method can be used independently of any object of the class
+while a non-static variable and a non-static method must only be accessed within the its class.
+-Static variables should be used when it needs to be accessed by another object of a class
+while non-static variables should be used when it is only to be accessed within its class.
+-A static method may be called by another class only when if the class is also static.

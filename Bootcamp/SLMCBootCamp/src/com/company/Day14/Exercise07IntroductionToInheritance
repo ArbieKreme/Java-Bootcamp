@@ -1,0 +1,10 @@
+1.)
+c.
+-The purpose of the super() is to reuse parent constructor Employee and Consultant.
+-The purpose of the super in the toString() is to invoke the immediate parent class.
+d.
+-The variables in Person is not directly accesible in Employee.
+-a static access modifier would allow access.
+3.) The object class is the superclass of all other classes. Other java classes
+are subclasses to the object class.
+

@@ -1,0 +1,64 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Student Information System</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+</head>
+
+<body>
+
+    <div class = "container">
+		<h1>Student List</h1>
+
+		Add Subjects <a href="addSubject">here</a>
+
+		<table class = "table">
+
+			<th>Subject Name</th>
+			<th>Time in</th>
+			<th>Time out</th>
+			<th>Department</th>
+
+			<c:forEach var="student" items="${listSubjects}">
+				<tr>
+
+					<td>${subjects.subjectName}</td>
+					<td>${subjects.intTime}</td>
+					<td>${subjects.outTime}</td>
+					<td>${subjects.department}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                           <!-- Trigger the modal with a button -->
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editSubject">Edit</button>
+
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#deleteSubject">Delete</button>
+
+					</td>
+				</tr>
+			</c:forEach>
+		</table>
+
+	</div>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script>$(function() {
+
+                  $("#dialog").dialog({
+                     autoOpen: false,
+                     modal: true
+                   });
+
+                  $("#editButton").on("click", function(e) {
+                      e.preventDefault();
+                      $("#dialog").dialog("open");
+                  });
+
+                });
+        </script>
+</body>
+</html>
